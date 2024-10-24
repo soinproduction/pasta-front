@@ -1,0 +1,137 @@
+.swiper-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(45px, 4.5139vw, 65px);
+  border-radius: 100%;
+  transition: all .3s;
+  color: #CED2FE;
+  width: clamp(45px, 4.5139vw, 65px);
+
+  svg,img{
+    width: 100%;
+    height: 100%;
+  }
+
+  &.swiper-button-next{
+    svg,img{
+      transform: scaleX(-1);
+    }
+  }
+
+
+  &:hover{
+    color: var(--cl-d);
+    opacity: .8;
+  }
+
+  &.swiper-button-disabled{
+    opacity: .4;
+  }
+
+
+  // &.swiper-button-lock{
+  //   opacity: 0;
+  //   visibility: hidden;
+  // }
+}
+
+.swiper-pagination{
+  display: flex;
+  align-items: center;
+  grid-gap: 20px;
+
+  &-bullet{
+    border-radius: 100%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-a);
+    border: 1px solid var(--br-c);
+    transition: all .3s;
+    cursor: pointer;
+
+    &-active{
+      border: 6px solid var(--br-c);
+    }
+  }
+}
+
+.transparent-btn {
+  transition: all .4s;
+  height: 59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 55px;
+  grid-gap: 10px;
+  width: fit-content;
+  padding: 18px clamp(20px, 1.9444vw, 28px) 15px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: clamp(16px, 1.3889vw, 20px);
+  color: var(--cl-d);
+  border:solid 1.5px var(--br-a);
+  background: transparent;
+
+  img,svg{
+    position: relative;
+    top: -2px;
+    display: flex;
+    width: 24px;
+    aspect-ratio: 1;
+  }
+
+  &:hover{
+    border-color: transparent;
+    background: var(--bg-d);
+    color: var(--cl-a);
+  }
+
+  &:disabled{
+    opacity: .7;
+    pointer-events: none;
+  }
+}
+
+.main-btn {
+  transition: all .4s;
+  height: clamp(50px, 4.0972vw, 59px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 55px;
+  grid-gap: 10px;
+  width: fit-content;
+  padding: 18px clamp(20px, 1.9444vw, 28px) 15px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: clamp(16px, 1.3889vw, 20px);
+  border:solid 1.5px transparent;
+  background: var(--bg-d);
+  color: var(--cl-a);
+  img,svg{
+    position: relative;
+    top: calc(clamp(1px, .1389vw, 2px) * -1);
+    display: flex;
+    width: 24px;
+    aspect-ratio: 1;
+  }
+
+  &:hover{
+    border-color: var(--br-a);
+    background: transparent;
+    color: var(--cl-d);
+  }
+
+  &:disabled{
+    opacity: .7;
+    pointer-events: none;
+  }
+
+  &.mode{
+    border-radius: 12px;
+    padding: 15px clamp(20px, 1.9444vw, 28px);
+    background:  var(--bg-e);
+  }
+}

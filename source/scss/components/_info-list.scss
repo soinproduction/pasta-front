@@ -1,0 +1,27 @@
+.info-list{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 2.0833vw, 30px);
+
+    &__item{
+        &:nth-child(even){
+
+            .info-card{
+                &__box{
+                    @include for-small-tablet{
+                        order: 2;
+                        justify-self: start;
+                    }
+                }
+
+                &__image{
+                 
+                    @include for-small-tablet{
+                        order: 1;
+                        margin: 0 0 0 calc(var(--container-offset) * -1);
+                    }
+                }
+            }
+        }
+    }
+}

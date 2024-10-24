@@ -1,0 +1,9 @@
+.news-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-gap: clamp(20px, 1.9531vw, 30px);
+
+    @include laptop{
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}

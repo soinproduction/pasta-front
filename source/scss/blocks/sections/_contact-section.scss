@@ -1,0 +1,59 @@
+.contact-section{
+    margin-bottom: clamp(80px, 8.4635vw, 130px);
+
+    &__box{
+        display: grid;
+
+        @include for-laptop{
+            grid-gap: 80px clamp(32px, 6.25vw, 96px);
+        }
+
+        @include laptop{
+            grid-gap: 80px 25px;
+        }
+
+        @include for-tablet{
+            grid-template-columns: 1fr clamp(400px, 40.4948vw, 622px);
+        }
+
+        @include tablet{
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__wrapp{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(24px, 2.6042vw, 40px);
+
+        @include tablet{
+            @include for-small-tablet{
+            align-items: center;
+                .wpcf7{
+                    max-width: 550px;
+                    align-self: center;
+                }
+            }
+        }
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(24px, 2.6042vw, 40px);
+
+        .contact + .editor{
+            margin-top: clamp(16px, 1.6276vw, 25px);
+        }
+
+        .editor{
+            background-color: rgba(28, 137, 188, .4);
+            padding: clamp(20px, 1.5625vw, 24px);
+            border-radius: clamp(20px, 1.5625vw, 24px);
+
+            p{
+                font-size: clamp(20px, 1.4323vw, 22px);
+            }
+        }
+    }
+}

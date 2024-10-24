@@ -1,0 +1,106 @@
+.about-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: clamp(20px, 1.9531vw, 30px);
+
+  @include laptop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include small-tablet {
+    grid-template-columns: 100%;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 1.9531vw, 30px);
+
+    @include laptop {
+      @include for-small-tablet {
+        &:last-of-type {
+          grid-column: 1/-1;
+          .about-card {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            &__title {
+              margin-top: 0;
+              align-self: end;
+            }
+
+            .about-card__image {
+              grid-column: 1;
+              grid-row: 1/3;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: clamp(20px, 1.9531vw, 30px);
+
+    &.mode {
+      @include for-laptop {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @include laptop{
+        @include for-tablet{
+            grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+
+  &.mode {
+    grid-template-columns: 100%;
+
+    @include tablet{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .about-card {
+      grid-gap: 8px;
+      border-radius: clamp(20px, 1.5625vw, 24px);
+
+      @include mobile{
+        grid-gap: 5px;
+      }
+
+      &__title {
+        font-size: clamp(22px, 1.5625vw, 24px);
+      }
+
+      p {
+        font-size: clamp(18px, 1.3021vw, 20px);
+        line-height: 130%;
+
+        @include mobile{
+            line-height: 135%;
+        }
+      }
+
+      &__image {
+        height: clamp(180px, 16.276vw, 250px);
+
+        & + .about-card__title {
+          margin-top: clamp(13px, .9115vw, 14px);
+        }
+      }
+    }
+
+    .about-list{
+        &__item{
+            @include tablet{
+                display: contents;
+            }
+        }
+    }
+
+  }
+}

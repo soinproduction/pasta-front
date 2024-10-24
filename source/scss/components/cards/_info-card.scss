@@ -1,0 +1,88 @@
+.info-card{
+    display: grid;
+    grid-gap: clamp(20px, 1.6667vw, 24px);
+    align-items: center;
+    height: 100%;
+
+    @include for-small-tablet{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small-tablet{
+        grid-template-columns: 100%;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(24px, 2.5vw, 36px);
+
+        @include for-tablet{
+            padding: clamp(25px, 2.7778vw, 40px) clamp(30px, 4.1667vw, 60px) clamp(30px, 4.1667vw, 60px);
+        }
+
+        @include tablet{
+           @include for-small-tablet{
+            padding: 25px 16px 30px;
+           }
+        }
+
+        @include for-small-tablet{
+            max-width: 708px;
+            justify-self: end;
+        }
+
+        @include small-tablet{
+            padding: 6px 0 16px;
+            align-items: center;
+        }
+
+        .main-btn{
+            @include mobile{
+                width: 100%;
+            }
+        }
+    }
+
+   .editor{
+
+    h1,h2,h3,h4,h5,h6{
+        font-size: clamp(28px, 3.4722vw, 50px);
+    }
+   
+    h1,h3,h4,h5,h6{
+        font-family: var(--third-family);
+        font-weight: 400;
+        line-height: 102%;
+        color: var(--cl-d);
+    }
+
+    @include for-small-tablet{
+        max-width: 570px;
+    }
+
+    @include small-tablet{
+        *{
+            text-align: center;
+        }
+    }
+   }
+
+    &__image{
+        display: flex;
+        width: 100%;
+
+        @include for-small-tablet{
+            height: clamp(400px, 43.9583vw, 633px);
+            width: calc(100% + var(--container-offset));
+            margin-right: calc(var(--container-offset) * -1);
+        }
+
+        @include small-tablet{
+            height: clamp(280px, 52.083vw, 400px);
+            order: -1;
+            width: calc(100% + (var(--container-offset) * 2));
+            margin: 0 calc(var(--container-offset) * -1);
+        }
+    }
+}

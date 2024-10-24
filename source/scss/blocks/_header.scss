@@ -1,0 +1,113 @@
+.header {
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  transition: all .3s;
+  padding: clamp(15px, 2.4306vw, 35px) 0;
+
+  &.sticky{
+    padding: clamp(15px, 1.3889vw, 20px) 0;
+    box-shadow: 0 4px 22px 0 rgba(6, 8, 17, 0.11);
+    background: var(--bg-c);
+  }
+
+  &.open-menu {
+   
+    .header__box{
+      &::before {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.2s, visibility 0.2s;
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+      }
+    }
+  }
+
+  &__box {
+    
+    display: grid;
+    position: relative;
+    z-index: 2;
+    align-items: center;
+
+    @include for-tablet {
+      grid-template-columns: auto 1fr auto;
+      grid-gap: clamp(70px, 10.4167vw, 150px);
+    }
+
+    @include tablet {
+      grid-template-columns: auto 1fr;
+      grid-gap: 10px;
+
+      &::before {
+        position: absolute;
+        inset: 0;
+        content: "";
+        border-radius: inherit;
+        background: rgba(28, 27, 31, 0.7);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s 0.7s, visibility 0.5s 0.7s, z-index 0.5s 0.7s;
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    z-index: 5;
+
+    @include for-tablet {
+      justify-content: flex-end;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      grid-gap: clamp(10px, 1.5278vw, 22px);
+
+      li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      a {
+        transition: all 0.2s linear;
+        display: flex;
+        align-items: center;
+        grid-gap: 5px;
+        position: relative;
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: clamp(14px, 1.1806vw, 17px);
+        color: var(--cl-c);
+
+        &.active{
+          font-weight: 700;
+          color:  var(--cl-d);
+        }
+
+        &:hover {
+          color: var(--cl-d);
+        }
+      }
+    }
+  }
+
+  .burger {
+    justify-self: end;
+    @include for-tablet {
+      display: none;
+    }
+
+    @include tablet {
+      @include burger;
+    }
+  }
+}

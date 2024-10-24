@@ -1,0 +1,30 @@
+.socials{
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(16px, 1.5972vw, 23px);
+    height: fit-content;
+
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        aspect-ratio: 1;
+        color: var(--cl-d);
+        border-radius: 100%;
+        transition: all .3s;
+
+        &:hover{
+            svg,img{
+                transform: scale(1.08);
+            }
+        }
+
+        svg,img{
+            display: flex;
+            width: 33px;
+            aspect-ratio: 1;
+            transition: all .2s;
+        }
+    }
+}

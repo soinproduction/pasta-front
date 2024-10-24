@@ -1,0 +1,91 @@
+.step-list {
+  display: flex;
+  flex-direction: column;
+  grid-gap: clamp(20px, 1.9531vw, 30px);
+
+  counter-reset: step;
+
+  &__row {
+    display: grid;
+    grid-gap: clamp(20px, 1.9531vw, 30px);
+
+    @include for-laptop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include laptop {
+      @include for-small-tablet {
+        grid-template-columns: repeat(2, 1fr);
+
+        .step-card:last-of-type {
+          grid-column: 1/-1;
+        }
+      }
+    }
+
+    @include small-tablet {
+      grid-template-columns: 100%;
+    }
+
+    &:first-of-type {
+      @include for-desktop {
+        grid-template-columns: 1fr repeat(3, 0.646fr);
+      }
+
+      @include desktop {
+        @include for-small-tablet {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @include laptop {
+        @include for-small-tablet {
+          .step-card:last-of-type {
+            grid-column: initial;
+          }
+        }
+      }
+
+      @include small-tablet {
+        grid-template-columns: 100%;
+      }
+
+      .step-card {
+        &__image {
+          @include desktop {
+            @include for-small-tablet {
+              max-height: 250px;
+            }
+          }
+        }
+      }
+    }
+
+    &:last-of-type {
+      @include for-laptop{
+        grid-template-columns: repeat(2, 0.481fr) 1fr;
+      }
+
+      @include laptop {
+        @include for-tablet {
+          grid-template-columns: repeat(2, 0.6fr) 1fr;
+          .step-card:last-of-type {
+            grid-column: initial;
+          }
+        }
+      }
+
+      @include tablet{
+        @include for-small-tablet{
+            grid-template-columns: repeat(2, 1fr);
+
+            .step-card {
+                &__image {
+                 max-height: 250px;
+                }
+              }
+        }
+      }
+    }
+  }
+}

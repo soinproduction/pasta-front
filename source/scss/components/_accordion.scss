@@ -1,0 +1,54 @@
+.accordion{
+    display: flex;
+    flex-direction: column;
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid var(--br-a);
+
+        @include for-tablet{
+            padding: clamp(20px, 2.0833vw, 30px) clamp(30px, 2.7778vw, 40px) clamp(20px, 2.0833vw, 30px) clamp(30px, 4.1667vw, 60px);
+        }
+
+        @include tablet{
+            padding: clamp(16px, 2.0833vw, 30px) clamp(16px, 2.7778vw, 40px)
+        }
+    }
+
+    .editor{
+        padding-top: clamp(16px, 1.3889vw, 20px);
+    }
+
+    &__btn{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        grid-gap: 20px;
+        justify-content: space-between;
+        transition: all .3s;
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: clamp(18px, 2.0139vw, 29px);
+        line-height: 102%;
+        color: var(--cl-d);
+        text-align: start;
+
+        svg,img{
+            width: 24px;
+            height: 24px;
+            transition: all .3s;
+        }
+
+        &:hover{
+            color: var(--cl-g);
+        }
+
+        &.active{
+
+            svg,img{
+                transform: scaleY(-1);
+            }
+        }
+    }
+}

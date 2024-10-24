@@ -1,0 +1,43 @@
+.faq-section {
+  margin-bottom: clamp(90px, 12.5vw, 180px);
+
+  &__box {
+    display: grid;
+    grid-gap: 24px;
+
+    @include for-laptop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include laptop {
+      @include for-tablet {
+        grid-template-columns: 0.8fr 1fr;
+      }
+    }
+
+    @include tablet {
+      grid-template-columns: 100%;
+    }
+
+    .main-top {
+
+        @include for-laptop{
+            padding: clamp(20px, 2.0833vw, 30px) clamp(30px, 2.7778vw, 40px)
+            clamp(20px, 2.0833vw, 30px) clamp(30px, 4.1667vw, 60px);
+        }
+
+      @include laptop {
+        @include for-tablet{
+            padding: clamp(20px, 2.0833vw, 30px) clamp(30px, 2.7778vw, 40px)
+            clamp(20px, 2.0833vw, 30px) 0;
+        }
+      }
+
+     
+
+      @include tablet{
+        justify-self: center;
+      }
+    }
+  }
+}

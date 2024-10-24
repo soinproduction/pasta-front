@@ -1,0 +1,244 @@
+.title{
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: clamp(36px, 3.2552vw, 50px);
+  line-height: 120%;
+  text-transform: uppercase;
+  color: var(--cl-c);
+}
+
+.subtitle{
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: clamp(24px, 1.9531vw, 30px);
+  line-height: 130%;
+  text-transform: uppercase;
+  color: var(--cl-c);
+}
+
+.search-form {
+  background-color: var(--bg-a);
+  border-radius: clamp(4px, .5208vw, 8px);
+  padding: 12px 24px 12px 48px;
+  max-width: 472px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  label{
+    width: 100%;
+  }
+
+  button{
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 24px;
+    height: 24px;
+    display: flex;
+
+    svg{
+      transition: all .3s;
+      width: 100%;
+      height: auto;
+    }
+
+    &:hover{
+      svg{
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  input{
+    text-overflow: ellipsis;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    letter-spacing: 0.03em;
+    color: var(--cl-f);
+
+    &::placeholder{
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 133%;
+      letter-spacing: 0.03em;
+      color: var(--cl-f);
+    }
+  }
+}
+
+.blog-labels{
+  display: flex;
+  align-items: center;
+  grid-gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item{
+    width: fit-content;
+    height: fit-content;
+    background: rgba(28, 137, 188, .4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cl-c);
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    border-radius: 30px;
+    padding: 2px 14px 6px 14px;
+  }
+}
+
+.date{
+  display: inline-flex;
+  align-items: center;
+  grid-gap: 9px;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--cl-g);
+
+  i{
+    font-style: normal;
+    display: inline-flex;
+    align-items: center;
+    grid-gap: 8px;
+
+    &::before{
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+      background: var(--bg-h);
+      display: block;
+      pointer-events: none;
+    }
+  }
+}
+
+.share{
+  display: flex;
+  flex-direction: column;
+  grid-gap: 16px;
+
+  &__btn{
+    @include for-tablet{
+      display: none;
+    }
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    width: 48px;
+    border-radius: 100%;
+    background-color: var(--bg-d);
+    transition: all .3s;
+    position: relative;
+    z-index: 1;
+
+    &:hover{
+      background-color: var(--bg-c);
+    }
+  
+    svg,img{
+      transition: all .3s;
+    }
+
+    &::before{
+      position: absolute;
+      content: '';
+      background-image: var(--close);
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      opacity: 0;
+      transition: all .3s;
+    }
+
+    &.active{
+      svg,img{
+        opacity: 0;
+      }
+
+      &::before{
+        opacity: 1;
+      }
+    }
+  }
+
+  .socials{
+    flex-direction: column;
+
+    @include tablet{
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all .3s;
+    }
+
+    &.active{
+      @include tablet{
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &__item{
+      &:nth-child(2){
+        .socials__icon{
+          svg,img{
+            width: 18px;
+          }
+        }
+      }
+    }
+
+    &__link{
+      width: 48px;
+      border-color: var(--br-b);
+      
+      &:hover{
+        .socials__icon{
+          color: var(--cl-a);
+        }
+      }
+
+      @include tablet{
+        background-color: var(--bg-a);
+      }
+    }
+
+    &__icon{
+      width: 22px;
+      color: var(--cl-d);
+    }
+  }
+
+  &__title{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--cl-c);
+
+    @include tablet{
+      display: none;
+    }
+  }
+}

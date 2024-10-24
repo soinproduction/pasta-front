@@ -1,0 +1,49 @@
+.about-slider{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+
+    .swiper-slide{
+        width: 100%;
+    }
+
+    .swiper-container{
+        width: 100%;
+    }
+
+    .swiper-pagination{
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50px;
+    }
+
+    .swiper-btn{
+        position: absolute;
+        top: 50%;
+        z-index: 3;
+        
+        &.swiper-button-next{
+            @include for-laptop{
+                right: 28px;
+            }
+
+            @include laptop{
+                right: 0;
+            }
+        }
+
+        &.swiper-button-prev{
+         
+            @include for-laptop{
+                left: 28px;
+            }
+
+            @include laptop{
+                left: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,143 @@
+.main-table{
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid var(--br-d);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+
+
+  
+
+    &__row{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        border-bottom:solid 1px var(--br-d);
+
+        &:last-of-type{
+            border: none;
+        }
+
+        &--head{
+            background-color: var(--bg-e);
+
+            @include small-tablet{
+                display: none;
+            }
+        }
+
+        @include small-tablet{
+            grid-template-columns: 100%;
+
+            &:before{
+                content: attr(data-title);
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 120%;
+                background-color: var(--bg-e);
+                padding: 16px 14px;
+            }
+            
+
+            .main-table__value:first-of-type{
+                    font-weight: 600;
+                    border-bottom:solid 1px var(--br-d);
+                    padding: 16px 14px;
+
+                    &::before{
+                        content: none;
+                    }
+            }
+       
+        }
+
+    }
+
+    &__title{
+        font-weight: 700;
+        line-height: 120%;
+        padding: 16px 14px;
+
+        @include for-tablet{
+            font-size: clamp(18px, 1.3021vw, 20px);
+        }
+
+        @include tablet{
+            font-size: 20px;
+        }
+
+        @include for-small-tablet{
+            padding: 16px 14px;
+        }
+
+        @include small-tablet{
+            padding: 8px 14px;
+        }
+    }
+
+    &__value{
+        font-weight: 400;
+        line-height: 115%;
+
+        @include for-tablet{
+            font-size: clamp(18px, 1.3021vw, 20px);
+        }
+
+        @include tablet{
+            font-size: 20px;
+        }
+
+        @include for-small-tablet{
+            padding: 16px 14px;
+        }
+
+        @include small-tablet{
+            padding: 8.5px 14px;
+
+            &:before{
+                content: attr(data-attr);
+                font-weight: 400;
+                line-height: 115%;
+                font-size: 20px;
+                padding-right: 14px;
+            }
+
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+        }
+    }
+
+    &__box{
+        @include for-small-tablet{
+            display: contents;
+        }
+
+        display: flex;
+        flex-direction: column;
+        padding: 8px 0;
+        .main-table__value:first-of-type{
+            @include small-tablet{
+                font-weight: 400;
+                border-bottom: none;
+                padding: 8.5px 14px;
+                &::before{
+                    content: attr(data-attr);
+                }
+            }
+        }
+    }
+
+    &.mode{
+
+        .main-table{
+
+            &__row{
+
+                &--head{
+                    display: none;
+                }
+            }
+        }
+    }
+}
