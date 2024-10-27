@@ -5,7 +5,6 @@
     &__item{
         display: flex;
         flex-direction: column;
-        border-bottom: 1px solid var(--br-a);
 
         @include for-tablet{
             padding: clamp(20px, 2.0833vw, 30px) clamp(30px, 2.7778vw, 40px) clamp(20px, 2.0833vw, 30px) clamp(30px, 4.1667vw, 60px);
@@ -13,6 +12,10 @@
 
         @include tablet{
             padding: clamp(16px, 2.0833vw, 30px) clamp(16px, 2.7778vw, 40px)
+        }
+
+        &:not(:last-child){
+            border-bottom: 1px solid var(--br-a);
         }
     }
 

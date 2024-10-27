@@ -1,5 +1,5 @@
 .faq-section {
-  margin-bottom: clamp(90px, 12.5vw, 180px);
+  margin-bottom: clamp(90px, 8.3333vw, 120px);
 
   &__box {
     display: grid;
@@ -20,7 +20,6 @@
     }
 
     .main-top {
-
         @include for-laptop{
             padding: clamp(20px, 2.0833vw, 30px) clamp(30px, 2.7778vw, 40px)
             clamp(20px, 2.0833vw, 30px) clamp(30px, 4.1667vw, 60px);
@@ -37,7 +36,12 @@
 
       @include tablet{
         justify-self: center;
+
       }
     }
   }
+
+  & + .about-section{
+    margin-top: calc(clamp(90px, 8.3333vw, 120px) * -1);
+}
 }

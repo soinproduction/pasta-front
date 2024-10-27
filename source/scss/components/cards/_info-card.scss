@@ -5,7 +5,8 @@
     height: 100%;
 
     @include for-small-tablet{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, calc(50% - (clamp(20px, 1.6667vw, 24px) / 2)) );
+        align-items: center;
     }
 
     @include small-tablet{
@@ -65,24 +66,17 @@
         *{
             text-align: center;
         }
+
+        ul{
+            width: fit-content;
+            margin: 0 auto;
+           
+            li{
+                text-align: start;
+            }
+        }
     }
    }
 
-    &__image{
-        display: flex;
-        width: 100%;
-
-        @include for-small-tablet{
-            height: clamp(400px, 43.9583vw, 633px);
-            width: calc(100% + var(--container-offset));
-            margin-right: calc(var(--container-offset) * -1);
-        }
-
-        @include small-tablet{
-            height: clamp(280px, 52.083vw, 400px);
-            order: -1;
-            width: calc(100% + (var(--container-offset) * 2));
-            margin: 0 calc(var(--container-offset) * -1);
-        }
-    }
+   
 }

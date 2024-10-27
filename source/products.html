@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+    <section class="hero-section hero-section--products">
+      <div class="hero-section__image" >
+        <picture>
+          <source type='image/webp' srcset='img/product/bg.webp'>
+          <img width='1920' height='665' src='img/product/bg.png' alt='image'>
+        </picture>
+      </div>
+      <div class="container">
+        <div class="hero-section__box">
+          <div class="main-top">
+            <div class="editor">
+              <h1>Наша продукція</h1>
+              <p>У виробництві макаронних виробів ми використовуємо крупку вищого ґатунку, яку закуповуємо лише у висококласних постачальників. В результаті наші макарони відзначаються відмінною якістю та смаковими властивостями. Ми також пропонуємо пісні макарони без додавання яєць, що робить нашу продукцію ще більш універсальною для різних категорій споживачів.</p>
+            </div>
+            <button class="transparent-btn">Отримати прайс лист
+              <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#arrow-right'></use>
+              </svg>
+            </button>
+          </div>  
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section">
+      <div class="container">
+        <div class="product-section__box">
+          <div class="product-section__wrapp">
+            <div class="product-section__filter">
+              <h2 class="product-section__title">Фільтр:</h2>
+
+              <button class="filter-btn" data-aside-btn>
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#filter'></use>
+                </svg>
+              </button>
+
+              <aside class="product-section__aside">
+                <h2 class="product-section__title">Фільтр:</h2>
+             
+                <div class="product-section__choice">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Для супів та бульйонів</span>
+                  </label>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Без додавання яєць (пісні)</span>
+                  </label>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Дитячі</span>
+                  </label>
+                </div>
+              </aside>
+            </div>
+ 
+            <div class="product-section__inner">
+              <ul class="product-list">
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product.webp'>
+                        <img width='342' height='342' src='img/product/product.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product2.webp'>
+                        <img width='342' height='342' src='img/product/product2.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product.webp'>
+                        <img width='342' height='342' src='img/product/product.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product2.webp'>
+                        <img width='342' height='342' src='img/product/product2.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product.webp'>
+                        <img width='342' height='342' src='img/product/product.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product.webp'>
+                        <img width='342' height='342' src='img/product/product.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product2.webp'>
+                        <img width='342' height='342' src='img/product/product2.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product.webp'>
+                        <img width='342' height='342' src='img/product/product.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product.webp'>
+                        <img width='342' height='342' src='img/product/product.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product2.webp'>
+                        <img width='342' height='342' src='img/product/product2.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product.webp'>
+                        <img width='342' height='342' src='img/product/product.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product.webp'>
+                        <img width='342' height='342' src='img/product/product.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product2.webp'>
+                        <img width='342' height='342' src='img/product/product2.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product.webp'>
+                        <img width='342' height='342' src='img/product/product.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product.webp'>
+                        <img width='342' height='342' src='img/product/product.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product2.webp'>
+                        <img width='342' height='342' src='img/product/product2.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product.webp'>
+                        <img width='342' height='342' src='img/product/product.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product.webp'>
+                        <img width='342' height='342' src='img/product/product.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product2.webp'>
+                        <img width='342' height='342' src='img/product/product2.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product.webp'>
+                        <img width='342' height='342' src='img/product/product.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product.webp'>
+                        <img width='342' height='342' src='img/product/product.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-list__item">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/product/product2.webp'>
+                        <img width='342' height='342' src='img/product/product2.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="product-card__box">
+                      <a href="#" class="product-card__link">
+                        Малі рожки
+                        <svg width='20' height='8'>
+                          <use href='img/sprite/sprite.svg#arrow-right'></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <nav class="page-nav">
+            <button class="page-nav__btn prev" disabled>
+                <svg width='9' height='13'>
+                  <use href='img/sprite/sprite.svg#arrow'></use>
+                </svg>
+            </button>
+            <ul>
+                <li>
+                    <button class="active">1</button>
+                </li>
+                <li>
+                  <button>2</button>
+                </li>
+                <li>
+                  <button>3</button>
+                </li>
+            </ul>
+            <button class="page-nav__btn next">
+              <svg width='9' height='13'>
+                <use href='img/sprite/sprite.svg#arrow'></use>
+              </svg>
+            </button>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-section__box">
+          <div class="cta-section__icon">
+            <svg width='215' height='79'>
+              <use href='img/sprite/sprite.svg#arrow-big'></use>
+            </svg>
+          </div>
+          <div class="editor">
+            <h2>Залиште номер телефону та отримайте <b>прайс-лист</b> нашої пасти</h2>
+          </div>
+
+          <form class="cta-form">
+            <label for="phone" class="cta-form__label">
+              <img width='28' height='20' src="./img/sprite/ua.svg" alt="icon">
+              <input class="cta-form__input" type="tel" name="phone" id="phone" placeholder="+38 (012) 345-67-89 ">
+            </label>
+
+            <button class="main-btn">Підтвердити
+              <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#arrow-right'></use>
+              </svg>
+            </button>
+
+            <label class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__field">
+              <span class="custom-checkbox__content">Я хочу, щоб мені передзвонили та проконсультували</span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <div class="container container--mode">
+        <div class="info-section__box">
+          <ul class="info-list reverse">
+            <li class="info-list__item">
+              <div class="info-card">
+                <div class="info-card__box">
+                  <div class="editor">
+                    <h2>Познайомтеся зі смачними рецептами</h2>
+                    <p>Що б ви не захотіли приготувати та скуштувати, у нас обов'язково знайдеться рецепт, з якого можна почати.</p>
+                 </div>
+                  <button class="main-btn">
+                    Переглянути всі рецепти
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#arrow-right'></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="info-slider">
+                    <div class='swiper-container'>
+                      <ul class='swiper-wrapper'>
+                        <li class='swiper-slide'>
+                          <picture>
+                            <source type='image/webp' srcset='img/index/img2.webp'>
+                            <img width='1948' height='633' src='img/index/img2.png' alt='image'>
+                          </picture>
+                        </li>
+                      </ul>
+                    </div>
+                    <button class='swiper-btn swiper-button-next'>
+                      <svg width='65' height='65'>
+                        <use href='img/sprite/sprite.svg#arrow-l'></use>
+                      </svg>
+                    </button>
+                    <button class='swiper-btn swiper-button-prev'>
+                      <svg width='65' height='65'>
+                        <use href='img/sprite/sprite.svg#arrow-l'></use>
+                      </svg>
+                    </button>
+                    <span class='swiper-pagination'></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="news-section">
+      <div class="container">
+        <div class="news-section__box">
+          <div class="news-section__top">
+            <h2 class="news-section__title">Останні рецепти</h2>
+
+            <ul class="main-nav">
+              <li class="main-nav__item">
+                <button class="main-nav__btn">ВСІ</button>
+              </li>
+              <li class="main-nav__item">
+                <button class="main-nav__btn">Сніданки</button>
+              </li>
+              <li class="main-nav__item">
+                <button class="main-nav__btn">Перші страви</button>
+              </li>
+              <li class="main-nav__item">
+                <button class="main-nav__btn active">Другі страви</button>
+              </li>
+              <li class="main-nav__item">
+                <button class="main-nav__btn">Десерти</button>
+              </li>
+              <li class="main-nav__item">
+                <button class="main-nav__btn">Вечері</button>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="news-list">
+            <li class="news-list__item">
+              <div class="news-card">
+                <div class="news-card__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/index/img4.webp'>
+                    <img width='464' height='222' src='img/index/img4.png' alt='image'>
+                  </picture>
+                </div>
+
+                <div class="editor">
+                  <h2>Паста з куркою та броколі у вершковому соусі</h2>
+
+                  <p>Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.</p>
+                </div>
+
+                <div class="news-card__bottom">
+                  <div class="news-card__labels">
+                    <span class="news-card__label">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#hourglass'></use>
+                      </svg>
+                      30 хв
+                    </span>
+                    <span class="news-card__label">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#cloche'></use>
+                      </svg>
+                      2 порції
+                    </span>
+                  </div>
+                  <button class="green-btn">Другі страви</button>
+                </div>
+              </div>
+            </li>
+            <li class="news-list__item">
+              <div class="news-card">
+                <div class="news-card__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/index/img4.webp'>
+                    <img width='464' height='222' src='img/index/img4.png' alt='image'>
+                  </picture>
+                </div>
+
+                <div class="editor">
+                  <h2>Паста з куркою та броколі у вершковому соусі</h2>
+                  <p>Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.</p>
+               </div>
+
+                <div class="news-card__bottom">
+                  <div class="news-card__labels">
+                    <span class="news-card__label">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#hourglass'></use>
+                      </svg>
+                      30 хв
+                    </span>
+                    <span class="news-card__label">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#cloche'></use>
+                      </svg>
+                      2 порції
+                    </span>
+                  </div>
+                  <button class="green-btn">Другі страви</button>
+                </div>
+              </div>
+            </li>
+            <li class="news-list__item">
+              <div class="news-card">
+                <div class="news-card__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/index/img4.webp'>
+                    <img width='464' height='222' src='img/index/img4.png' alt='image'>
+                  </picture>
+                </div>
+
+                <div class="editor">
+                  <h2>Паста з куркою та броколі у вершковому соусі</h2>
+
+                  <p>Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.</p>
+                </div>
+
+                <div class="news-card__bottom">
+                  <div class="news-card__labels">
+                    <span class="news-card__label">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#hourglass'></use>
+                      </svg>
+                      30 хв
+                    </span>
+                    <span class="news-card__label">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#cloche'></use>
+                      </svg>
+                      2 порції
+                    </span>
+                  </div>
+                  <button class="green-btn">Другі страви</button>
+                </div>
+              </div>
+            </li>
+            <li class="news-list__item">
+              <div class="news-card">
+                <div class="news-card__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/index/img4.webp'>
+                    <img width='464' height='222' src='img/index/img4.png' alt='image'>
+                  </picture>
+                </div>
+
+                <div class="editor">
+                  <h2>Паста з куркою та броколі у вершковому соусі</h2>
+
+                  <p>Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.</p>
+                </div>
+
+                <div class="news-card__bottom">
+                  <div class="news-card__labels">
+                    <span class="news-card__label">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#hourglass'></use>
+                      </svg>
+                      30 хв
+                    </span>
+                    <span class="news-card__label">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#cloche'></use>
+                      </svg>
+                      2 порції
+                    </span>
+                  </div>
+                  <button class="green-btn">Другі страви</button>
+                </div>
+              </div>
+            </li>
+            <li class="news-list__item">
+              <div class="news-card">
+                <div class="news-card__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/index/img4.webp'>
+                    <img width='464' height='222' src='img/index/img4.png' alt='image'>
+                  </picture>
+                </div>
+
+                <div class="editor">
+                  <h2>Паста з куркою та броколі у вершковому соусі</h2>
+
+                  <p>Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.</p>
+                </div>
+
+                <div class="news-card__bottom">
+                  <div class="news-card__labels">
+                    <span class="news-card__label">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#hourglass'></use>
+                      </svg>
+                      30 хв
+                    </span>
+                    <span class="news-card__label">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#cloche'></use>
+                      </svg>
+                      2 порції
+                    </span>
+                  </div>
+                  <button class="green-btn">Другі страви</button>
+                </div>
+              </div>
+            </li>
+            <li class="news-list__item">
+              <div class="news-card">
+                <div class="news-card__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/index/img4.webp'>
+                    <img width='464' height='222' src='img/index/img4.png' alt='image'>
+                  </picture>
+                </div>
+
+                <div class="editor">
+                  <h2>Паста з куркою та броколі у вершковому соусі</h2>
+
+                  <p>Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.</p>
+                </div>
+
+                <div class="news-card__bottom">
+                  <div class="news-card__labels">
+                    <span class="news-card__label">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#hourglass'></use>
+                      </svg>
+                      30 хв
+                    </span>
+                    <span class="news-card__label">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#cloche'></use>
+                      </svg>
+                      2 порції
+                    </span>
+                  </div>
+                  <button class="green-btn">Другі страви</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+
+          <nav class="page-nav">
+            <button class="page-nav__btn prev" disabled>
+                <svg width='9' height='13'>
+                  <use href='img/sprite/sprite.svg#arrow'></use>
+                </svg>
+            </button>
+            <ul>
+                <li>
+                    <button class="active">1</button>
+                </li>
+                <li>
+                  <button>2</button>
+                </li>
+                <li>
+                  <button>3</button>
+                </li>
+            </ul>
+            <button class="page-nav__btn next">
+              <svg width='9' height='13'>
+                <use href='img/sprite/sprite.svg#arrow'></use>
+              </svg>
+            </button>
+        </nav>
+        </div>
+      </div>
+    </section> -->
+    
+
+    <section class="order-section">
+      <div class="container">
+        <div class="order-section__box">
+          <div class="main-top">
+            <div class="editor">
+              <h2>Залиште заявку</h2>
+              <p>і ми обов’язково зв'яжемося з вами найближчим часом</p>
+            </div>
+          </div>
+
+          <div class="wpcf7">
+            <form class="main-form" aria-label="Order form">
+
+              <label class="main-form__label" for="name">
+                <input class="main-form__input" id="name" name="name" placeholder="Ваше ім’я та прізвище" type="text">
+              </label>
+
+              <label class="main-form__label" for="mail">
+                <input class="main-form__input" id="mail" name="mail" placeholder="Ваш email" type="email">
+              </label>
+
+              <label class="main-form__label" for="phone">
+                <input class="main-form__input" id="phone" name="phone" placeholder="Телефон" type="tel">
+              </label>
+
+              <label class="main-form__label" for="mess">
+                <textarea class="main-form__mess" name="mess" id="mess" placeholder="Текст повідомлення"></textarea>
+              </label>
+
+              <button class="main-btn">
+                Надіслати
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#arrow-right'></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

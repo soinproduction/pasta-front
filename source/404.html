@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+    <section class="error-section">
+      <div class="container">
+          <div class="error-section__box">
+              <div class="error-section__inner">
+                <p>На жаль, сторінка<br> не знайдена</p>
+                <a href="/" class="main-btn">
+                  Стати дистриб’ютором
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#arrow-right'></use>
+                  </svg>
+                </a>
+              </div>
+              <h1 class="title">404</h1>
+          </div>
+      </div>
+  </section>
+  </main>
+  
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

@@ -1,49 +1,51 @@
 .news-section{
-
+    background: var(--bg-a);
+    padding: clamp(40px, 4.1667vw, 60px) 0;
+    overflow: hidden;
     &__box{
         display: flex;
         flex-direction: column;
-        grid-gap: clamp(32px, 3.125vw, 48px);
-        border-radius: clamp(24px, 2.0833vw, 32px);
-        padding: clamp(40px, 4.1667vw, 64px) clamp(16px, 2.0833vw, 32px);
-        background-color: rgba(28, 137, 188, .4);
-        overflow: hidden;
-
-        @include small-tablet{
-            width: calc(100% + (var(--container-offset) * 2));
-            margin: 0 calc((var(--container-offset) * -1));
+        grid-gap: clamp(32px, 3.3333vw, 48px);
+     
+        .page-nav{
+            margin-top: 2px;
         }
     }
 
-
-    &__inner{
+    &__top{
         display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        grid-gap: clamp(48px, 5.2083vw, 80px);
+        flex-wrap: wrap;
+        grid-gap: 15px;
 
-        
-        @include small-tablet{
-            width: 100%;
-            margin: 0;
+        @include for-tablet{
+            align-items: center;
         }
-
-        .news-card{
-            background: var(--bg-e);
-        }
-    }
-
-    .main-top{
-        grid-template-columns: 1fr auto;
 
         @include tablet{
-            grid-template-columns: 100%;
-        }
+            align-items: flex-start;
+            flex-direction: column;
 
-        .main-btn{
-            @include tablet{
-                display: none;
+
+            .main-nav{
+                overflow: scroll;
+                width: calc(100% + calc(var(--container-offset) * 2));
+                margin-left: calc(var(--container-offset) * -1);
+                padding: 0 var(--container-offset);
+
+                &__btn{
+                    white-space: nowrap;
+                }
+
+                &::-webkit-scrollbar {
+                    @include tablet {
+                      display: none;
+                    }
+                  }
             }
         }
+    }
+
+    &__title{
+        flex: 1;
     }
 }

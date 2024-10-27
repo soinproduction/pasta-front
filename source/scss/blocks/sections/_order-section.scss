@@ -1,5 +1,9 @@
 .order-section{
-    padding-bottom: clamp(30px, 4.1667vw, 60px);
+    margin-bottom: clamp(30px, 4.1667vw, 60px);
+
+    &:last-of-type{
+        margin-bottom: clamp(30px, 4.1667vw, 60px);
+    }
 
     &__box{
         padding: clamp(35px, 5.4167vw, 78px) 24px;

@@ -9,6 +9,7 @@ export default {
   footer: document.querySelector('footer'),
 
   mainSliders: document.querySelectorAll('.about-slider'),
+  infoSliders: document.querySelectorAll('.info-slider'),
 
 
 

@@ -1,11 +1,13 @@
 // ----------------- MAIN COMPONENTS -----------------
 
-// @import "../components/main-components/page-nav.scss";
+@import "../components/main-components/page-nav.scss";
+@import "../components/main-components/main-nav.scss";
 // @import "../components/main-components/main-table.scss";
 // @import "../components/main-components/contact.scss";
 @import "../components/main-components/socials.scss";
 @import "../components/main-components/main-form.scss";
 @import "../components/main-components/main-top.scss";
+@import "../components/main-components/cta-form.scss";
 
 // ----------------- BLOCK COMPONENTS -----------------
 // @import "../components/about-list.scss";
@@ -13,28 +15,31 @@
 // @import "../components/usage-list.scss";
 // @import "../components/choose-list.scss";
 // @import "../components/step-list.scss";
-// @import "../components/news-list.scss";
+
 // @import "../components/main-slider.scss";
 // @import "../components/blog-slider.scss";
 // @import "../components/blog-nav.scss";
 
-
+@import "../components/news-list.scss";
 @import "../components/info-list.scss";
 @import "../components/accordion.scss";
 @import "../components/about-slider.scss";
+@import "../components/product-list.scss";
+@import "../components/info-slider.scss";
 
 
 // ----------------- CARD COMPONENTS -----------------
 
 // @import "../components/cards/more-card.scss";
 // @import "../components/cards/usage-card.scss";
-// @import "../components/cards/news-card.scss";
+
 // @import "../components/cards/choose-card.scss";
 // @import "../components/cards/step-card.scss";
 
-
+@import "../components/cards/news-card.scss";
 @import "../components/cards/info-card.scss";
 @import "../components/cards/about-card.scss";
+@import "../components/cards/product-card.scss";
 
 
 

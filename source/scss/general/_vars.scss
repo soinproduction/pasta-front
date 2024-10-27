@@ -23,7 +23,7 @@
   --overlay-bg: rgba(0, 0, 0, 0.5);
 
     // --------------- default JS variables ---------------
-    --header-height: 91px;
+    --header-height: 160px;
  
     @include tablet{
       --header-height: 60px;
@@ -47,6 +47,9 @@
   --cl-g: #DB6550; // var(--cl-g);
   --cl-h: #a33f2d; // var(--cl-h);
   --cl-j:  #6e2b1f; // var(--cl-j);
+  --cl-k:  #0328ee; // var(--cl-k);
+  --cl-l:  #010725; // var(--cl-l);
+  --cl-m:  #ced2fe; // var(--cl-m);
 
   // --------------- default background color variables ---------------
   --bg-a: #ffffff; // var(--bg-a);
@@ -54,22 +57,20 @@
   --bg-c: #edeffd; // var(--bg-c);
   --bg-d: #000f9f; // var(--bg-d);
   --bg-e: #a33f2d; // var(--bg-e);
-
-
-  --bg-f: #f9dedc; // var(--bg-f);
-  --bg-g: #0f1f26; // var(--bg-g);
-  --bg-h: #CAC4D0; // var(--bg-h);
+  --bg-f: #E9E2D2; // var(--bg-f);
+  --bg-g: #db6550; // var(--bg-g);
+  --bg-h: #FEEEEB; // var(--bg-h);
+  --bg-j: #CED2FE; // var(--bg-j);
 
   // --------------- default border color variable ---------------
   --br-a: #000f9f; // var(--br-a);
   --br-b: #343131; // var(--br-b);
   --br-c: #CED2FE; // var(--br-c);
-
-
-  --br-d: #E6E0E9; // var(--br-d);
+  --br-d: #fff; // var(--br-d);
 
  // --------------- default gradient color variable ---------------
  --gr-a: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(245,240,226,1) 60%); // var(--gr-a);
+ --gr-b: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(206, 210, 254, 0.55) 41.27%); // var(--gr-b);
 
  // --------------- loader variable -------------------------------
  --loader: linear-gradient(90deg, #FDD65F 0%, rgba(255, 255, 255, 1) 49%, rgba(255, 255, 255, 1) 51%, #0000fd 100%); // var(--loader);

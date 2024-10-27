@@ -2,9 +2,7 @@ import Swiper from "../vendor/swiper.js";
 import vars from "../_vars.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const {
-    mainSliders,
-  } = vars;
+  const { mainSliders, infoSliders } = vars;
 
   mainSliders.forEach(function (slider) {
     const container = slider.querySelector(".swiper-container");
@@ -39,5 +37,34 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  infoSliders.forEach(function (slider) {
+    const container = slider.querySelector(".swiper-container");
+    const nextBtn = slider.querySelector(".swiper-button-next");
+    const prevBtn = slider.querySelector(".swiper-button-prev");
+    const pagination = slider.querySelector(".swiper-pagination");
+
+    const slides = container.querySelectorAll('.swiper-slide');
+    const isSingleSlide = slides.length === 1;
+
+    const infoSwiper = new Swiper(container, {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        speed: 1800,
+        watchOverflow: true,
+        observer: true,
+        observeParents: true,
+        loop: !isSingleSlide,
+        autoplay: !isSingleSlide ? { delay: 3000 } : false,
+
+        navigation: {
+            nextEl: nextBtn,
+            prevEl: prevBtn,
+        },
+        pagination: {
+            el: pagination,
+            clickable: true,
+        },
+    });
+});
 
 });

@@ -1,5 +1,5 @@
 .info-section{
-    padding-bottom: clamp(30px, 4.1667vw, 60px);
+    padding: 0 0 clamp(30px, 4.1667vw, 60px);
 
     &__box{
         display: flex;
@@ -10,7 +10,17 @@
            align-items: center;
            text-align: center; 
         }
+    }
 
-       
+    & + .history-section{
+        margin-top: calc(clamp(30px, 4.1667vw, 60px) * -1);
+    }
+
+    & + .faq-section{
+        padding-bottom: clamp(30px, 4.1667vw, 60px);
+    }
+
+    & + .about-section{
+        margin-top: calc(clamp(30px, 4.1667vw, 60px) * -1);
     }
 }
