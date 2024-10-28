@@ -17,10 +17,16 @@
     }
 
     & + .faq-section{
-        padding-bottom: clamp(30px, 4.1667vw, 60px);
+        @include for-mobile{
+            padding-bottom: clamp(30px, 4.1667vw, 60px);
+        }
     }
 
     & + .about-section{
+        margin-top: calc(clamp(30px, 4.1667vw, 60px) * -1);
+    }
+
+    & + .news-section{
         margin-top: calc(clamp(30px, 4.1667vw, 60px) * -1);
     }
 }

@@ -1,9 +1,42 @@
 .more-section{
-    margin-bottom: clamp(80px, 8.4635vw, 130px);
+  margin: clamp(40px, 4.1667vw, 60px) 0;
 
-    &__box {
+  &:last-of-type{
+    margin-bottom: clamp(40px, 4.1667vw, 60px);
+  }
+
+  &__box{
       display: flex;
       flex-direction: column;
-      grid-gap: clamp(32px, 3.125vw, 48px);
+      grid-gap: clamp(35px, 3.3333vw, 48px);
+
+      .main-top{
+         align-items: center;
+         text-align: center; 
+      }
+  }
+
+  &__top{
+    padding: 6px 0;
+    display: flex;
+    grid-gap: 15px;
+
+    @include for-mobile{
+      align-items: center;
+      justify-content: space-between;
     }
+
+    @include mobile{
+      flex-direction: column;
+    }
+
+    .transparent-btn, .main-btn{
+      height: clamp(46px, 4.0972vw, 59px);
+      padding: clamp(11px, 1.25vw, 18px) clamp(20px, 1.9444vw, 28px) clamp(10px, 1.0417vw, 15px);
+
+      @include mobile{
+        width: 100%;
+      }
+    }
+  }
 }

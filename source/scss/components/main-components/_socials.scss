@@ -1,14 +1,14 @@
 .socials{
     display: flex;
     align-items: center;
-    grid-gap: clamp(16px, 1.5972vw, 23px);
+    grid-gap: clamp(12px, 1.5972vw, 23px);
     height: fit-content;
 
     &__link{
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
+        width: clamp(35px, 2.7778vw, 40px);
         aspect-ratio: 1;
         color: var(--cl-d);
         border-radius: 100%;
@@ -22,7 +22,7 @@
 
         svg,img{
             display: flex;
-            width: 33px;
+            width: clamp(28px, 2.2917vw, 33px);
             aspect-ratio: 1;
             transition: all .2s;
         }

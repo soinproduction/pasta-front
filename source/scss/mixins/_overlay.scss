@@ -16,7 +16,7 @@
   transition: opacity .5s .7s, visibility .5s .7s, z-index .5s .7s;
   transition-timing-function: cubic-bezier(.25,.1,.25,1);
   pointer-events: none;
-
+  backdrop-filter: blur(3px);
   @include  mobile {
     padding: 10px 0 !important;
   }

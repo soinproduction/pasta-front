@@ -1,5 +1,5 @@
 .faq-section {
-  margin-bottom: clamp(90px, 8.3333vw, 120px);
+  margin-bottom: clamp(40px, 8.3333vw, 120px);
 
   &__box {
     display: grid;
@@ -42,6 +42,8 @@
   }
 
   & + .about-section{
-    margin-top: calc(clamp(90px, 8.3333vw, 120px) * -1);
-}
+    @include for-mobile{
+      margin-top: calc(clamp(90px, 8.3333vw, 120px) * -1);
+    }
+  }
 }

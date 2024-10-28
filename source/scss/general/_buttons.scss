@@ -39,20 +39,20 @@
 .swiper-pagination{
   display: flex;
   align-items: center;
-  grid-gap: 20px;
+  grid-gap: clamp(16px, 1.3889vw, 20px);
 
   &-bullet{
     border-radius: 100%;
     display: block;
-    width: 20px;
-    height: 20px;
+    width: clamp(16px, 1.3889vw, 20px);
+    height: clamp(16px, 1.3889vw, 20px);
     background-color: var(--bg-a);
     border: 1px solid var(--br-c);
     transition: all .3s;
     cursor: pointer;
 
     &-active{
-      border: 6px solid var(--br-c);
+      border: clamp(4px, .4167vw, 6px) solid var(--br-c);
     }
   }
 }
@@ -144,10 +144,10 @@
   border-radius: 80px;
   grid-gap: 8px;
   width: fit-content;
-  padding: 10px clamp(14px, 1.3889vw, 20px);
+  padding: clamp(5px, .6944vw, 10px) clamp(15px, 1.3889vw, 20px);
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 15px;
+  font-size: clamp(13px, 1.0417vw, 15px);
   line-height: 139%;
   text-align: center;
   color: var(--cl-e);
@@ -164,6 +164,42 @@
   &:hover{
     background: var(--bg-g);
     color: var(--cl-a);
+  }
+
+  &:disabled{
+    opacity: .7;
+    pointer-events: none;
+  }
+}
+
+.orange-btn {
+  transition: all .4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 80px;
+  grid-gap: 8px;
+  width: fit-content;
+  padding: clamp(5px, .6944vw, 10px) clamp(15px, 1.3889vw, 20px);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: clamp(13px, 1.0417vw, 15px);
+  line-height: 139%;
+  text-align: center;
+  background: var(--bg-g);
+  color: var(--cl-a);
+
+  img,svg{
+    position: relative;
+    top: calc(clamp(1px, .1389vw, 2px) * -1);
+    display: flex;
+    width: 24px;
+    aspect-ratio: 1;
+  }
+
+  &:hover{
+    color: var(--cl-e);
+    background: var(--bg-f);
   }
 
   &:disabled{

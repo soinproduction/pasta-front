@@ -2,7 +2,7 @@ import Swiper from "../vendor/swiper.js";
 import vars from "../_vars.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const { mainSliders, infoSliders } = vars;
+  const { mainSliders, infoSliders, cookingSliders } = vars;
 
   mainSliders.forEach(function (slider) {
     const container = slider.querySelector(".swiper-container");
@@ -67,4 +67,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+cookingSliders.forEach(function (slider) {
+  const container = slider.querySelector(".swiper-container");
+  const nextBtn = slider.querySelector(".swiper-button-next");
+  const prevBtn = slider.querySelector(".swiper-button-prev");
+
+  const slides = container.querySelectorAll('.swiper-slide');
+  const isSingleSlide = slides.length === 1;
+
+  const cookingSwiper = new Swiper(container, {
+      spaceBetween: 20,
+      slidesPerView: 1,
+      speed: 1800,
+      watchOverflow: true,
+      observer: true,
+      observeParents: true,
+      loop: !isSingleSlide,
+      autoplay: !isSingleSlide ? { delay: 3000 } : false,
+
+      navigation: {
+          nextEl: nextBtn,
+          prevEl: prevBtn,
+      }
+  });
+});
 });

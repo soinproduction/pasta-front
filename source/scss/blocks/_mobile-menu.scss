@@ -1,14 +1,14 @@
 .mobile {
   position: fixed;
-  top: 0;
+  top: var(--header-height);
   right: 0;
   width: 100%;
-  height: fit-content;
-  background: var(--bg-a);
-  z-index: 60;
+  height: 100%;
+  background: var(--bg-c);
+  z-index: 90;
   overflow: hidden;
   transition: 0.3s ease;
-  max-width: 330px;
+  max-width: 430px;
   transform: translateX(110%);
   padding: 32px 24px 32px;
   border-top: solid 1px var(--br-a);
@@ -65,8 +65,8 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: start;
-        grid-gap: 32px;
+        align-items: center;
+        grid-gap: 24px;
 
         a, .menu-button {
           width: 100%;

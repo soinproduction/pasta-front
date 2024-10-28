@@ -9,10 +9,8 @@
 
 
   .container{
-    @include for-laptop{
       max-width: 100%;
       padding: 0;
-    }
   }
 
   & + .cta-section{

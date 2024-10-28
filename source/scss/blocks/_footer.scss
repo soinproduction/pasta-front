@@ -1,14 +1,37 @@
 .footer {
-  padding: clamp(45px, 5.2083vw, 75px) 0 clamp(30px, 5.2083vw, 75px);
+  padding: clamp(35px, 5.2083vw, 75px) 0 clamp(30px, 5.2083vw, 75px);
   background: var(--bg-c);
 
   &__box {
     display: grid;
-    grid-template-columns: 1.35fr .7fr 1fr;
-    grid-gap: clamp(32px, 2.7778vw, 40px);
-
+   
     @include for-laptop{
       padding-right: Min(8.5417vw, 123px);
+    }
+
+    @include for-tablet{
+      grid-template-columns: 1.2fr .9fr 1fr;
+    }
+
+    @include tablet{
+      @include for-small-tablet{
+        grid-template-columns: .6fr .8fr 1fr;
+      }
+    }
+
+    @include small-tablet{
+      @include for-mobile{
+        grid-template-columns: auto .8fr 1fr;
+      }
+    }
+
+    @include for-mobile{
+      grid-gap: clamp(24px, 2.7778vw, 40px);
+    }
+
+    @include mobile{
+      grid-gap: 30px 24px;
+      grid-template-columns: 100%;
     }
   }
 
@@ -27,8 +50,6 @@
     }
 
     ul {
-      display: flex;
-      flex-direction: column;
       grid-gap: 10px 20px;
 
       a {
@@ -55,6 +76,39 @@
           text-decoration-color: inherit;
         }
       }
+
+      li{
+        @include mobile{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      @include for-tablet{
+        display: flex;
+        flex-direction: column;
+      }
+
+      @include tablet{
+          grid-gap: 10px 14px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          justify-content: center;
+    
+          @include for-mobile{
+            width: 100%;
+          }
+      }
+
+      @include mobile{
+        width: fit-content;
+        grid-gap:12px 42px;
+      }
+    }
+
+    @include mobile{
+      align-items: center;
     }
   }
 
@@ -89,6 +143,11 @@
             width: 24px;
             aspect-ratio: 1;
           
+            @include mobile{
+              position: relative;
+              width: 20px;
+              top: -3px;
+            }
           }
   
           font-family: var(--second-family);
@@ -97,6 +156,11 @@
           color:  var(--cl-e);
           display: inline-flex;
           grid-gap: clamp(8px, .6944vw, 10px);
+
+          @include mobile{
+            font-size: 14px;
+            max-width: 280px;
+          }
         }
   
         a{
@@ -122,14 +186,55 @@
             width: 24px;
             aspect-ratio: 1;
             position: relative;
-            top: 1.5px;
+           
+
+            @include mobile{
+              width: 20px;
+              top: -3px;
+            }
+          }
+
+          @include mobile{
+            font-size: 14px;
           }
         }
+
+        @include mobile{
+          justify-content: center;
+        }
       }
+
+      @include mobile{
+        align-items: center;
+      }
+    }
+
+    @include mobile{
+      grid-column: 1/-1;
+      align-items: center;
+    }
+  }
+
+  &__logo{
+    width: clamp(80px, 10.3472vw, 149px);
+    height: fit-content;
+    display: flex;
+
+    svg,img{
+      width: 100%;
+      height: auto;
+    }
+
+    @include mobile{
+      justify-self: center;
     }
   }
 
   .socials{
     margin-top: clamp(10px, 1.3889vw, 20px);
+
+    @include mobile{
+      justify-content: center;
+    }
   }
 }

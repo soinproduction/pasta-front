@@ -4,8 +4,10 @@
   position: fixed;
   z-index: 30;
   top: 0;
-  transition: all .3s;
   padding: clamp(15px, 2.4306vw, 35px) 0;
+
+  transition: background .4s .05s;
+  transition-timing-function: cubic-bezier(.25,.1,.25,1);
 
   &.sticky{
     padding: clamp(15px, 1.3889vw, 20px) 0;
@@ -14,45 +16,63 @@
   }
 
   &.open-menu {
-   
-    .header__box{
-      &::before {
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 0.2s, visibility 0.2s;
-        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-      }
-    }
+    transition: background .2s;
+    transition-timing-function: cubic-bezier(.25,.1,.25,1);
+    background: var(--bg-c);
+  }
+
+  @include tablet{
+    padding: 15px 0;
   }
 
   &__box {
-    
     display: grid;
     position: relative;
     z-index: 2;
     align-items: center;
 
+    @include for-laptop{
+      grid-template-columns: repeat(2, auto);
+      justify-content: space-between;
+    }
+
+    @include laptop{
+      @include for-tablet{
+        grid-template-columns: auto 1fr auto;
+      }
+    }
+
     @include for-tablet {
-      grid-template-columns: auto 1fr auto;
-      grid-gap: clamp(70px, 10.4167vw, 150px);
+      grid-gap: 20px;
     }
 
     @include tablet {
       grid-template-columns: auto 1fr;
       grid-gap: 10px;
+    }
+  
+    .transparent-btn{
+      padding: 18px clamp(16px, 1.9444vw, 28px) 15px;
+      height: clamp(50px, 4.0972vw, 59px);
 
-      &::before {
-        position: absolute;
-        inset: 0;
-        content: "";
-        border-radius: inherit;
-        background: rgba(28, 27, 31, 0.7);
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.5s 0.7s, visibility 0.5s 0.7s, z-index 0.5s 0.7s;
-        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-        pointer-events: none;
+      @include desktop{
+        padding: 18px 16px 15px;
       }
+    }
+  }
+
+  &__logo{
+    display: flex;
+    width: clamp(70px, 6.8056vw, 98px);
+    height: fit-content;
+
+    svg,img{
+      width: 100%;
+      height: auto;
+    }
+
+    @include tablet{
+      width: clamp(50px, 6.348vw, 65px);
     }
   }
 
@@ -61,9 +81,20 @@
     align-items: center;
     z-index: 5;
 
-    @include for-tablet {
-      justify-content: flex-end;
+    @include for-laptop{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
+
+    @include laptop{
+      @include for-tablet{
+        justify-content: center;
+      }
+    }
+    
+
 
     ul {
       display: flex;
@@ -87,6 +118,7 @@
         font-weight: 400;
         font-size: clamp(14px, 1.1806vw, 17px);
         color: var(--cl-c);
+        white-space: nowrap;
 
         &.active{
           font-weight: 700;

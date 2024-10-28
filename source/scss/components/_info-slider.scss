@@ -36,7 +36,7 @@
         z-index: 5;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 25px;
+        bottom: clamp(15px, 1.7361vw, 25px);
 
         .swiper-pagination-bullet{
             width: 16px;
@@ -80,6 +80,10 @@
         &.swiper-button-lock{
             opacity: 0;
             visibility: hidden;
+        }
+
+        @include small-tablet{
+          display: none;
         }
     }
   }

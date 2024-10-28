@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+    <section class="hero-section hero-section--recipe">
+      <div class="container">
+        <div class="hero-section__box">
+          <div class="main-top">
+            <div class="editor">
+              <h1>Паста карбонара</h1>
+              <p>Паста карбонара – це класична італійська страва, яка поєднує в собі насичений смак бекону, вершковий соус та ніжні спагеті. Готується швидко і просто, але дарує вишукане гастрономічне задоволення.</p>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </section>
+
+    <section class="recipe-section">
+      <div class="container container--mode">
+        <div class="recipe-section__box">
+          <div class="recipe-card">
+            <div class="recipe-card__image">
+              <picture>
+                <source type='image/webp' srcset='img/index/img2.webp'>
+                <img width='1948' height='633' src='img/index/img2.png' alt='image'>
+              </picture>
+            </div>
+
+            <div class="recipe-card__box">
+              <div class="editor">
+                <h2>Інгредієнти</h2>
+                <ul>
+                  <li>Спагеті – 400 г</li>
+                  <li>Бекон (панчетта або гуанчале) – 150 г</li>
+                  <li>Яйця – 4 шт.</li>
+                </ul>
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-section__box">
+          <div class="cta-section__icon">
+            <svg width='215' height='79'>
+              <use href='img/sprite/sprite.svg#arrow-big'></use>
+            </svg>
+          </div>
+          <div class="editor">
+            <h2>Залиште номер телефону та отримайте <b>прайс-лист</b> нашої пасти</h2>
+          </div>
+
+          <form class="cta-form">
+            <label for="phone" class="cta-form__label">
+              <img width='28' height='20' src="./img/sprite/ua.svg" alt="icon">
+              <input class="cta-form__input" type="tel" name="phone" id="phone" placeholder="+38 (012) 345-67-89 ">
+            </label>
+
+            <button class="main-btn">Підтвердити
+              <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#arrow-right'></use>
+              </svg>
+            </button>
+
+            <label class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__field">
+              <span class="custom-checkbox__content">Я хочу, щоб мені передзвонили та проконсультували</span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="more-section">
+      <div class="container">
+        <div class="more-section__box" data-tabs-parrent>
+          <div class="more-section__top">
+            <ul class="more-nav">
+              <li class="more-nav__item">
+               <button class="more-nav__btn active" type="button" data-tab="1">Останні новини</button>
+              </li>
+              <li class="more-nav__item">
+                <button class="more-nav__btn" type="button" data-tab="2">Смачні рецепти</button>
+               </li>
+            </ul>
+
+            <button class="transparent-btn">
+              Дивитись всі
+              <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#arrow-right'></use>
+              </svg>
+            </button>
+          </div>
+          
+          <ul class="more-content">
+              <li class="more-content__item active" data-tab-content="1">
+                <div class="more-content__box">
+                  <ul class="news-list">
+                    <li class="news-list__item">
+                      <a href="#" class="news-card">
+                        <div class="news-card__image">
+                          <picture>
+                            <source type='image/webp' srcset='img/index/img4.webp'>
+                            <img width='464' height='222' src='img/index/img4.png' alt='image'>
+                          </picture>
+                        </div>
+        
+                        <div class="editor">
+                          <h2>Паста з куркою та броколі у вершковому соусі</h2>
+        
+                          <p>Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.</p>
+                        </div>
+        
+                        <div class="news-card__bottom">
+                          <div class="news-card__labels">
+                            <span class="news-card__label">
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#hourglass'></use>
+                              </svg>
+                              30 хв
+                            </span>
+                            <span class="news-card__label">
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#cloche'></use>
+                              </svg>
+                              2 порції
+                            </span>
+                          </div>
+                          <button class="green-btn">Другі страви</button>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="news-list__item">
+                      <a href="#" class="news-card">
+                        <div class="news-card__image">
+                          <picture>
+                            <source type='image/webp' srcset='img/index/img4.webp'>
+                            <img width='464' height='222' src='img/index/img4.png' alt='image'>
+                          </picture>
+                        </div>
+        
+                        <div class="editor">
+                          <h2>Паста з куркою та броколі у вершковому соусі</h2>
+                          <p>Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.</p>
+                       </div>
+        
+                        <div class="news-card__bottom">
+                          <div class="news-card__labels">
+                            <span class="news-card__label">
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#hourglass'></use>
+                              </svg>
+                              30 хв
+                            </span>
+                            <span class="news-card__label">
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#cloche'></use>
+                              </svg>
+                              2 порції
+                            </span>
+                          </div>
+                          <button class="green-btn">Другі страви</button>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="news-list__item">
+                      <a href="#" class="news-card">
+                        <div class="news-card__image">
+                          <picture>
+                            <source type='image/webp' srcset='img/index/img4.webp'>
+                            <img width='464' height='222' src='img/index/img4.png' alt='image'>
+                          </picture>
+                        </div>
+        
+                        <div class="editor">
+                          <h2>Паста з куркою та броколі у вершковому соусі</h2>
+        
+                          <p>Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.</p>
+                        </div>
+        
+                        <div class="news-card__bottom">
+                          <div class="news-card__labels">
+                            <span class="news-card__label">
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#hourglass'></use>
+                              </svg>
+                              30 хв
+                            </span>
+                            <span class="news-card__label">
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#cloche'></use>
+                              </svg>
+                              2 порції
+                            </span>
+                          </div>
+                          <button class="green-btn">Другі страви</button>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="more-content__item" data-tab-content="2">
+                <div class="more-content__box">
+                  <ul class="news-list">
+                    <li class="news-list__item">
+                      <a href="#" class="news-card">
+                        <div class="news-card__image">
+                          <picture>
+                            <source type='image/webp' srcset='img/index/img4.webp'>
+                            <img width='464' height='222' src='img/index/img4.png' alt='image'>
+                          </picture>
+                        </div>
+        
+                        <div class="editor">
+                          <h2>Паста з куркою та броколі у вершковому соусі2</h2>
+                          <p>Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.</p>
+                       </div>
+        
+                        <div class="news-card__bottom">
+                          <div class="news-card__labels">
+                            <span class="news-card__label">
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#hourglass'></use>
+                              </svg>
+                              30 хв
+                            </span>
+                            <span class="news-card__label">
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#cloche'></use>
+                              </svg>
+                              2 порції
+                            </span>
+                          </div>
+                          <button class="green-btn">Другі страви</button>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="news-list__item">
+                      <a href="#" class="news-card">
+                        <div class="news-card__image">
+                          <picture>
+                            <source type='image/webp' srcset='img/index/img4.webp'>
+                            <img width='464' height='222' src='img/index/img4.png' alt='image'>
+                          </picture>
+                        </div>
+        
+                        <div class="editor">
+                          <h2>Паста з куркою та броколі у вершковому соусі1</h2>
+        
+                          <p>Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.</p>
+                        </div>
+        
+                        <div class="news-card__bottom">
+                          <div class="news-card__labels">
+                            <span class="news-card__label">
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#hourglass'></use>
+                              </svg>
+                              30 хв
+                            </span>
+                            <span class="news-card__label">
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#cloche'></use>
+                              </svg>
+                              2 порції
+                            </span>
+                          </div>
+                          <button class="green-btn">Другі страви</button>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="news-list__item">
+                      <a href="#" class="news-card">
+                        <div class="news-card__image">
+                          <picture>
+                            <source type='image/webp' srcset='img/index/img4.webp'>
+                            <img width='464' height='222' src='img/index/img4.png' alt='image'>
+                          </picture>
+                        </div>
+        
+                        <div class="editor">
+                          <h2>Паста з куркою та броколі у вершковому соусі</h2>
+        
+                          <p>Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.</p>
+                        </div>
+        
+                        <div class="news-card__bottom">
+                          <div class="news-card__labels">
+                            <span class="news-card__label">
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#hourglass'></use>
+                              </svg>
+                              30 хв
+                            </span>
+                            <span class="news-card__label">
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#cloche'></use>
+                              </svg>
+                              2 порції
+                            </span>
+                          </div>
+                          <button class="green-btn">Другі страви</button>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

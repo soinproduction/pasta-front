@@ -10,6 +10,7 @@ export default {
 
   mainSliders: document.querySelectorAll('.about-slider'),
   infoSliders: document.querySelectorAll('.info-slider'),
+  cookingSliders: document.querySelectorAll('.cooking-slider'),
 
 
 

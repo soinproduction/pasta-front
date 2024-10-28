@@ -5,8 +5,15 @@
   padding: 20px clamp(20px, 2.0833vw, 30px) 20px;
   display: flex;
   flex-direction: column;
-  grid-gap: 13px;
   min-height: clamp(420px, 37.5vw, 540px);
+
+  @include for-mobile{
+    grid-gap: 13px;
+  }
+
+  @include mobile{
+    grid-gap: 8px;
+  }
 
   &:hover{
 
@@ -52,6 +59,12 @@
     grid-gap: clamp(10px, 1.0417vw, 15px);
     flex-grow: 1;
     flex-wrap: wrap;
+
+    @include small-tablet{
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
   }
 
   &__labels{
@@ -71,12 +84,12 @@
     color: var(--cl-a);
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 13px;
+    font-size: clamp(10px, .9028vw, 13px);
     line-height: 139%;
 
     svg,img{
-      width: 24px;
-      height: 24px;
+      width: clamp(15px, 1.6667vw, 24px);
+      height: clamp(15px, 1.6667vw, 24px);
     }
   }
 
