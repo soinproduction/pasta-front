@@ -39,4 +39,10 @@
       }
     }
   }
+
+  &.white{
+      padding: clamp(40px, 4.1667vw, 60px) 0;
+      margin: 0;
+      background: var(--bg-a);
+  }
 }

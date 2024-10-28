@@ -5,8 +5,7 @@
   z-index: 30;
   top: 0;
   padding: clamp(15px, 2.4306vw, 35px) 0;
-
-  transition: background .4s .05s;
+  transition: all .4s .05s;
   transition-timing-function: cubic-bezier(.25,.1,.25,1);
 
   &.sticky{

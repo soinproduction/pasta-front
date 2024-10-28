@@ -78,6 +78,25 @@ document.querySelectorAll('[data-modal]').forEach(function (item) {
     })
 })
 
+const filterBtn = document.querySelector('[data-aside-btn]');
+const filterAside = document.querySelector('.product-section__aside');
+
+if (filterBtn && filterAside) {
+ 
+    filterBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleCustomClass(filterBtn, 'active');
+        toggleCustomClass(filterAside, 'active');
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!filterAside.contains(e.target) && !filterBtn.contains(e.target)) {
+            filterBtn.classList.remove('active');
+            filterAside.classList.remove('active');
+        }
+    });
+}
+
 
 
 

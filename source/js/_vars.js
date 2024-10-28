@@ -11,11 +11,8 @@ export default {
   mainSliders: document.querySelectorAll('.about-slider'),
   infoSliders: document.querySelectorAll('.info-slider'),
   cookingSliders: document.querySelectorAll('.cooking-slider'),
+  parentSliders: document.querySelectorAll('.product-slider'),
 
-
-
-  shareParent: document.querySelector('.share'),
-  parentSliders: document.querySelectorAll(".blog-slider"),
   burger: document.querySelectorAll('.burger'),
   mobileMenu: document.querySelector('.mobile'),
   overlay: document.querySelector('[data-overlay]'),

@@ -5,16 +5,13 @@
   --body-font-size: 16px;
   --content-width: 1440px;
   --content-width-mode: 1920px;
-
-  --content-width-mini: 1120px;
-  --content-width-medium: 1247px;
+  --content-width-mini: 952px;
 
   --container-offset: clamp(16px, 1.6667vw, 24px);
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   --container-width-mode: calc(var(--content-width-mode) + (var(--container-offset) * 2));
   --container-width-mini: calc(var(--content-width-mini) + (var(--container-offset) * 2));
-  --container-width-medium: calc(var(--content-width-medium) + (var(--container-offset) * 2));
 
   // --------------- default scroll variables ---------------
   --scrollbar-thumb:  #F6D43B;
@@ -26,7 +23,11 @@
     --header-height: 160px;
  
     @include tablet{
-      --header-height: 60px;
+      --header-height: 84px;
+    }
+
+    @include small-tablet{
+      --header-height: 76px;
     }
 
   // --------------- default font-family variables ---------------
@@ -75,7 +76,7 @@
  --gr-b: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(206, 210, 254, 0.55) 41.27%); // var(--gr-b);
 
  // --------------- loader variable -------------------------------
- --loader: linear-gradient(90deg, #FDD65F 0%, rgba(255, 255, 255, 1) 49%, rgba(255, 255, 255, 1) 51%, #0000fd 100%); // var(--loader);
+ --loader: linear-gradient(90deg, #db9350 0%, rgba(255, 255, 255, 1) 49.5%, rgba(255, 255, 255, 1) 50.5%, #00209f 100%); // var(--loader);
 }       
 
 

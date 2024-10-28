@@ -1,0 +1,68 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  grid-gap: 5px;
+
+  li {
+    display: flex;
+    align-items: center;
+    grid-gap: 5px;
+
+    &:not(:last-child) {
+      &::before {
+        content: '/';
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 139%;
+        color: var(--cl-b);
+        order: 2;
+        display: flex;
+      }
+    }
+
+    &:first-of-type {
+      position: relative;
+      padding-left: 25px;
+
+      &::after {
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-image: url(../img/sprite/home.svg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-52%);
+        left: 0;
+      }
+    }
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 139%;
+    color: var(--cl-b);
+
+    &:last-child {
+      pointer-events: none;
+      color: var(--cl-b);
+    }
+
+    a, span {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 139%;
+      color: var(--cl-b);
+      transition: all .3s;
+
+      &:hover {
+        color: var(--cl-d);
+      }
+    }
+  }
+}
