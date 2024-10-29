@@ -15,4 +15,8 @@
         & + .cta-section{
             margin-top: calc(clamp(35px, 4.1667vw, 60px) * -1);
         }
+
+        & + .editor-section{
+            margin: 0 0 clamp(35px, 4.1667vw, 60px);
+        }
 }

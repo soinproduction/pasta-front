@@ -133,6 +133,11 @@
     border-radius: 12px;
     padding: 15px clamp(20px, 1.9444vw, 28px);
     background:  var(--bg-e);
+
+    &:hover{
+      color: var(--cl-a);
+      background: var(--bg-d);
+    }
   }
 }
 

@@ -82,9 +82,7 @@
             visibility: hidden;
         }
 
-        @include small-tablet{
-          display: none;
-        }
+        display: none;
     }
   }
 }

@@ -108,7 +108,7 @@
       }
 
       a {
-        transition: all 0.2s linear;
+        transition: all 0.3s linear;
         display: flex;
         align-items: center;
         grid-gap: 5px;
@@ -124,7 +124,8 @@
           color:  var(--cl-d);
         }
 
-        &:hover {
+        &:hover {   
+          font-weight: 700;
           color: var(--cl-d);
         }
       }

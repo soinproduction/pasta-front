@@ -99,11 +99,23 @@ export const accInit = (accParents, dataBtn, dataContent) => {
         if (accordionParent) {
             const accordions = getAccordions(accordionParent, dataBtn);
 
+            if (accordionParent.hasAttribute("data-always-open")) {
+                accordions.forEach((button) => {
+                    const contentId = button.getAttribute(dataBtn);
+                    const content = accordionParent.querySelector(`[${dataContent}="${contentId}"]`);
+                 
+                    openAccordion(content);
+                    addCustomClass(button, "active");
+
+                    button.removeEventListener("click", accordionClickHandler);
+                });
+                return;
+            }
+
             if (accordionParent.dataset.default) {
                 accordionDefaultOpen(accordionParent, accordionParent.dataset.default);
             }
 
-            // Синхронизируем состояния кнопок и контента
             syncButtonWithContent(accordionParent, dataBtn, dataContent);
 
             activateAccordion(accordions, accordionClickHandler);
@@ -127,13 +139,7 @@ export const accReinit = (accordionParent, dataBtn, dataContent) => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const accParents = document.querySelectorAll("[data-accordion-init]");
-    const accTerms = document.querySelectorAll(".terms-acc[data-accordion-init]");
 
     accInit(accParents, "data-id", "data-content");
-
-    accTerms.forEach((accordionParent) => {
-        const btns = getAccordions(accordionParent, "data-id");
-        document.querySelector(':root').style.setProperty('--accLength', `${btns.length + 1}`);
-    });
 });
 

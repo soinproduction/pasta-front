@@ -12,6 +12,8 @@ export default {
   infoSliders: document.querySelectorAll('.info-slider'),
   cookingSliders: document.querySelectorAll('.cooking-slider'),
   parentSliders: document.querySelectorAll('.product-slider'),
+  filterBtn: document.querySelector('[data-aside-btn]'),
+  filterAside: document.querySelector('.product-section__aside'),
 
   burger: document.querySelectorAll('.burger'),
   mobileMenu: document.querySelector('.mobile'),
