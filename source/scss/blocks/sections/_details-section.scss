@@ -1,6 +1,6 @@
 .details-section{
-   padding-top: clamp(20px, 1.875vw, 27px);
-
+   padding-top: clamp(25px, 2.5694vw, 37px);
+   margin-bottom: clamp(40px, 4.1667vw, 60px);
    
 
     @include tablet{
@@ -9,14 +9,10 @@
         }
     }
 
-    @include mobile{
-        padding-bottom: 30px;
-    }
-
     &__box{
         display: flex;
         flex-direction: column;
-        grid-gap: 15px;
+        grid-gap: 25px;
     }
 
     &__inner{
@@ -33,11 +29,9 @@
         }
     }
 
-
     &__content{
         display: flex;
         flex-direction: column;
-        padding-bottom: 20px;
 
         .editor{
 
@@ -79,8 +73,9 @@
                         font-style: normal;
                         color: var(--cl-b);
                         border: 1px solid var(--br-c);
-                        padding: 1px 9px;
-                        margin-left: clamp(14px, 1.7361vw, 25px);
+                        border-radius: 15px;
+                        padding: 1px 12.5px;
+                        margin-left: clamp(14px, 1.4583vw, 21px);
                     }
 
                     p{
@@ -90,5 +85,9 @@
                 }
             }
         }
+    }
+
+    & + .cta-section{
+        margin-bottom: clamp(40px, 4.1667vw, 60px);
     }
 }

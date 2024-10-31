@@ -5,23 +5,34 @@ const {header} = vars;
 
 let lastScroll = 0;
 const defaultOffset = 40;
+const scrollUpDelay = 600;
 
-function stickyHeaderFunction(breakpoint){
+function stickyHeaderFunction(breakpoint) {
     let containerWidth = document.documentElement.clientWidth;
-    if (containerWidth > `${breakpoint}`) {
+
+    if (containerWidth > breakpoint) {
         const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
         const containHide = () => header.classList.contains('sticky');
-
+        
         window.addEventListener('scroll', () => {
-            if(scrollPosition() > lastScroll && !containHide() && scrollPosition() > defaultOffset) {
-                addCustomClass(header, "sticky")
-            }
-            else if(scrollPosition() < defaultOffset){
-                removeCustomClass(header, "sticky")
+            const currentScroll = scrollPosition();
+
+            if (currentScroll > lastScroll && !containHide() && currentScroll > defaultOffset) {
+                addCustomClass(header, "sticky");
+                header.classList.add("scroll-up");
+
+                setTimeout(() => {
+                    header.classList.remove("scroll-up");
+                    header.classList.add("return-to-place");
+                }, scrollUpDelay);
             }
 
-            lastScroll = scrollPosition();
-        })
+            if (currentScroll < defaultOffset) {
+                header.classList.remove("sticky", "scroll-up", "return-to-place");
+            }
+
+            lastScroll = currentScroll;
+        });
     }
 }
 

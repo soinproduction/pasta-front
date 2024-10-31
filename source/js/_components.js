@@ -6,4 +6,5 @@ import './components/fancybox.js';
 import './components/mobile-menu.js';
 import './components/tabs.js';
 import './components/anchor.js';
+import './components/toTop.js';
 

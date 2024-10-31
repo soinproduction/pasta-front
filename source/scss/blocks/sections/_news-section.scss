@@ -47,5 +47,10 @@
 
     &__title{
         flex: 1;
+
+        font-family: var(--third-family);
+        font-weight: 400;
+        font-size: clamp(24px, 2.4306vw, 35px);
+        line-height: 102%;
     }
 }

@@ -102,6 +102,7 @@
 
             &__btn{
                 color: var(--cl-d) !important;
+                pointer-events: none;
             }
 
             &__btn-icon{
